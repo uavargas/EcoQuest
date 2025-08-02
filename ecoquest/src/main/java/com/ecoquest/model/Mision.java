@@ -26,9 +26,9 @@ public abstract class Mision {
     private final String descripcion;
     private final PuntoEco ubicacion;
     private final LocalDate fecha;
-    private final String nivelDificultad;
+    private final NivelDificultad nivelDificultad;
 
-    public Mision(String id, String descripcion, PuntoEco ubicacion, LocalDate fecha, String nivelDificultad) {
+    public Mision(String id, String descripcion, PuntoEco ubicacion, LocalDate fecha, NivelDificultad nivelDificultad) {
         this.id = id;
         this.descripcion = descripcion;
         this.ubicacion = ubicacion;
@@ -61,7 +61,7 @@ public abstract class Mision {
         return fecha;
     }
 
-    public String getNivelDificultad() {
+    public NivelDificultad getNivelDificultad() {
         return nivelDificultad;
     }
 
