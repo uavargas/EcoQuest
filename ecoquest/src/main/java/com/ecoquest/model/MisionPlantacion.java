@@ -42,8 +42,6 @@ public class MisionPlantacion  extends Mision implements Recompensa {
         int puntos = this.cantidadArbolesPlantados * 20; // Asumiendo 20 puntos por árbol
         return "Has obtenido " + puntos + " puntos por tu esfuerzo en la plantación de árboles en la comunidad de EcoQuest.";
     }
-
-
     // Getters
     public int getCantidadArbolesPlantados() {
         return cantidadArbolesPlantados;
