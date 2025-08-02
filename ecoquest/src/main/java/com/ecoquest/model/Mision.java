@@ -1,25 +1,26 @@
 package com.ecoquest.model;
 
-
-
-
 import java.time.LocalDate;
 
 /**
- * Clase abstracta que representa una misión ecológica dentro del sistema EcoQuest.
+ * Clase abstracta que representa una misión ecológica dentro del sistema
+ * EcoQuest.
  * 
- * Define los atributos y métodos comunes a todas las misiones, como el identificador,
- * descripción, ubicación, fecha y nivel de dificultad. 
+ * Define los atributos y métodos comunes a todas las misiones, como el
+ * identificador,
+ * descripción, ubicación, fecha y nivel de dificultad.
  * 
- * No puede ser instanciada directamente; debe ser extendida por subclases concretas
- * (por ejemplo, MisionPlantacion, MisionLimpieza, MisionEducacion), 
- * las cuales implementan el método abstracto calcularImpacto() para definir 
+ * No puede ser instanciada directamente; debe ser extendida por subclases
+ * concretas
+ * (por ejemplo, MisionPlantacion, MisionLimpieza, MisionEducacion),
+ * las cuales implementan el método abstracto calcularImpacto() para definir
  * el impacto positivo específico de cada tipo de misión.
  * 
- * Esta abstracción garantiza que cada misión tenga su propia lógica de impacto y datos propios,
+ * Esta abstracción garantiza que cada misión tenga su propia lógica de impacto
+ * y datos propios,
  * promoviendo la extensibilidad y el correcto modelado del dominio.
  */
-public abstract class Mision  {
+public abstract class Mision {
 
     private final String id;
     private final String descripcion;
@@ -36,21 +37,21 @@ public abstract class Mision  {
     }
 
     /**
- * Obliga a cada subclase a indicar cuánto impacto positivo genera esta misión.
- * @return número que representa la cantidad de árboles plantados,
- *         kilos de basura recogidos, personas educadas, etc.,
- *         según el tipo concreto de misión.
- */
+     * Obliga a cada subclase a indicar cuánto impacto positivo genera esta misión.
+     * 
+     * @return número que representa la cantidad de árboles plantados,
+     *         kilos de basura recogidos, personas educadas, etc.,
+     *         según el tipo concreto de misión.
+     */
     public abstract int calcularImpacto();
 
-     
     public String getId() {
         return id;
     }
 
     public String getDescripcion() {
         return descripcion;
-    }    
+    }
 
     public PuntoEco getUbicacion() {
         return ubicacion;
@@ -64,14 +65,11 @@ public abstract class Mision  {
         return nivelDificultad;
     }
 
-
     @Override
     public String toString() {
         return String.format(
-            "Mision[id=%s, descripcion=%s, ubicacion=%s, fecha=%s, nivelDificultad=%s]",
-            id, descripcion, ubicacion, fecha, nivelDificultad
-        );
+                "Mision[id=%s, descripcion=%s, ubicacion=%s, fecha=%s, nivelDificultad=%s]",
+                id, descripcion, ubicacion, fecha, nivelDificultad);
     }
-
 
 }
