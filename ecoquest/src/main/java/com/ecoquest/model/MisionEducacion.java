@@ -31,4 +31,10 @@ public class MisionEducacion extends Mision {
         return asistentes;
     }
 
+    //getters
+    public int getAsistentes() {
+        return asistentes;
+    }
+    
+
 }

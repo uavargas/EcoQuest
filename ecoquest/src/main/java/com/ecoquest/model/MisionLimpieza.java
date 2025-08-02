@@ -43,4 +43,9 @@ public class MisionLimpieza extends Mision implements Recompensa {
         return "Has obtenido " + puntos + " puntos por tu esfuerzo en la limpieza ambiental en la comunidad de EcoQuest.";
     }
 
+    // Getters
+    public int getCantidadBasuraRecogida() {
+        return cantidadBasuraRecogida;
+    }
+
 }
