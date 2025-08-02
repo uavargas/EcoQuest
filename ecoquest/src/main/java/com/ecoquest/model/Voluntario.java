@@ -1,39 +1,89 @@
 package com.ecoquest.model;
 
+/**
+ * @author Alonso Vargas
+ */
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.HashSet;
 
+/**
+ * Representa a una persona que participa en las misiones ecológicas.
+ * Contiene la información mínima para identificar, evaluar y
+ * premiar su labor dentro del sistema EcoQuest.
+ */
 public class Voluntario {
 
-    private String id;
-    private String nombre;
-    private List<String> habilidades;// Lista de habilidades del voluntario
-    /**
-     * Conjunto de identificadores de misiones que el voluntario ha completado.
-     * Se utiliza un Set para evitar duplicados y garantizar que cada misión solo se
-     * registre una vez.
-     */
-    private Set<String> misionesCompletadas;
+    private final String id;
+    private final String nombre;
+    private final List<String> habilidades;
 
-    public Voluntario(String id, String nombre, List<String> habilidades) {
+    /**
+     * Conjunto de misiones completadas.
+     * Se usa Set<Mision> para:
+     *   1. Evitar que la misma misión se cuente dos veces.
+     *   2. Obtener búsqueda O(1) al verificar si ya la realizó.
+     * HashSet es suficiente porque el orden no es prioritario.
+     */
+    private final Set<Mision> misionesCompletadas;
+
+    /* ----------------------------------------------------------
+       Constructores
+       ---------------------------------------------------------- */
+    /**
+     * Constructor principal.
+     * Recibe id y nombre; inicializa colecciones vacías.
+     * Facilita la creación rápida de voluntarios sin habilidades
+     * ni misiones previas.
+     */
+    public Voluntario(String id, String nombre) {
         this.id = id;
         this.nombre = nombre;
-        this.habilidades = habilidades;
-        /**
-         * al crear un nuevo objeto Voluntario, el atributo misionesCompletadas se
-         * inicializa como un nuevo conjunto vacío (HashSet).
-         * Así, el voluntario comienza sin misiones completadas y se evita que haya
-         * elementos duplicados en ese conjunto.
-         * 
-         * 
-         * 
-         */
-
-        this.misionesCompletadas = new HashSet<>(); // Initialize with an empty set
+        this.habilidades = new ArrayList<>();
+        this.misionesCompletadas = new HashSet<>();
     }
 
-    // Getters
+    /**
+     * Constructor alternativo que permite crear un voluntario
+     * con habilidades iniciales (útil para carga masiva o pruebas).
+     */
+    public Voluntario(String id, String nombre, List<String> habilidades) {
+        this(id, nombre);               // reutiliza el constructor principal
+        this.habilidades.addAll(habilidades);
+    }
+
+    /* ----------------------------------------------------------
+       Métodos de comportamiento
+       ---------------------------------------------------------- */
+
+    /**
+     * Añade una habilidad al voluntario.
+     */
+    public void agregarHabilidad(String habilidad) {
+        habilidades.add(habilidad);
+    }
+
+    /**
+     * Registra que el voluntario completó una misión.
+     * Si la misión ya estaba registrada, Set la ignora automáticamente.
+     */
+    public void completarMision(Mision mision) {
+        misionesCompletadas.add(mision);
+    }
+
+    /**
+     * Devuelve la cantidad de misiones finalizadas.
+     * Se usa size() sobre el Set para evitar contar duplicados.
+     */
+    public int obtenerTotalMisiones() {
+        return misionesCompletadas.size();
+    }
+
+    /* ----------------------------------------------------------
+       Getters (sin setters → diseño inmutable)
+       ---------------------------------------------------------- */
+
     public String getId() {
         return id;
     }
@@ -46,16 +96,19 @@ public class Voluntario {
         return habilidades;
     }
 
-    public Set<String> getMisionesCompletadas() {
+    public Set<Mision> getMisionesCompletadas() {
         return misionesCompletadas;
     }
 
-    // @Override para que se sobreescriba el método toString y mostre la
-    // información del voluntario
+    /* ----------------------------------------------------------
+       Representación textual 
+       ---------------------------------------------------------- */
+
     @Override
     public String toString() {
-        return "Voluntario [id=" + id + ", nombre=" + nombre + ", habilidades=" + habilidades + ", misionesCompletadas="
-                + misionesCompletadas + "]";
+        return String.format(
+            "Voluntario[id=%s, nombre=%s, habilidades=%d, misionesCompletadas=%d]",
+            id, nombre, habilidades.size(), misionesCompletadas.size()
+        );
     }
-
 }
