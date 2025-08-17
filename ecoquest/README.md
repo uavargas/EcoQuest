@@ -120,7 +120,7 @@ ecoquest/
 
 #### **1. Clonar el Repositorio**
 ```bash
-git clone https://github.com/uvargas/ecoquest.git
+git clone https://github.com/uavargas/ecoquest.git
 cd ecoquest
 ```
 
@@ -380,7 +380,7 @@ El sistema EcoQuest ha sido probado y documentado con capturas de pantalla que m
 
 ---
 
-#### **📍 Registro de Puntos Ecológicos con Coordenadas GPS**
+#### **📍 Registro de Puntos Ecológicos**
 ![Punto Ecológico Registrado](src/main/resources/screenshots/puntoEcologicoRegistrado.png)
 
 **Descripción**: Registro de un punto ecológico con coordenadas GPS reales. El sistema valida las coordenadas y confirma el registro con la ubicación exacta (latitud y longitud).
@@ -555,4 +555,4 @@ Las contribuciones son bienvenidas. Por favor:
 
 **¡Gracias por revisar EcoQuest! 🌱**
 
-*Un proyecto para poner en practica y demostrar dominio de POO, colecciones y arquitectura de software profesional, respaldado por evidencia visual completa de su funcionamiento.*
+*Un proyecto para poner en práctica y demostrar dominio de POO, colecciones y arquitectura de software profesional, respaldado por evidencia visual completa de su funcionamiento.*
