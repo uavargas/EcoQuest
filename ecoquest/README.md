@@ -646,16 +646,6 @@ Las contribuciones son bienvenidas. Por favor:
 
 ---
 
-## 📞 **CONTACTO Y PREGUNTAS**
-
-Si tienes preguntas sobre el proyecto o quieres contribuir:
-
-- 📧 **Email**: [tu-email@ejemplo.com]
-- 🐛 **Issues**: [GitHub Issues](https://github.com/uvargas/ecoquest/issues)
-- 💬 **Discusiones**: [GitHub Discussions](https://github.com/uvargas/ecoquest/discussions)
-
----
-
 ## 🏆 **RECONOCIMIENTOS**
 
 - **Módulo 8**: Programación Orientada a Objetos y Manejo de Colecciones
@@ -668,20 +658,3 @@ Si tienes preguntas sobre el proyecto o quieres contribuir:
 **¡Gracias por revisar EcoQuest! 🌱**
 
 *Un proyecto para poner en practica y demostrar dominio de POO, colecciones y arquitectura de software profesional, respaldado por evidencia visual completa de su funcionamiento.*
-
----
-
-## 📸 **GALERÍA DE CAPTURAS DE PANTALLA**
-
-Todas las capturas de pantalla están disponibles en la carpeta `src/main/resources/screenshots/` y demuestran:
-
-- ✅ **Funcionamiento completo** del sistema
-- ✅ **Interfaz profesional** y fácil de usar
-- ✅ **Validaciones robustas** en acción
-- ✅ **Sistema de recompensas** funcionando
-- ✅ **Reportes detallados** generados
-- ✅ **Búsquedas avanzadas** con Streams
-- ✅ **Gestión de coordenadas GPS** reales
-- ✅ **Arquitectura POO** implementada correctamente
-
-**Estas capturas de pantalla son la evidencia visual de que EcoQuest cumple al 100% con todos los requisitos del Módulo 8.**
