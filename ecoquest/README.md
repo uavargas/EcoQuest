@@ -4,7 +4,7 @@
 [![Maven](https://img.shields.io/badge/Maven-3.8+-blue.svg)](https://maven.apache.org/)
 
 
-> **Proyecto Final del Módulo 4: Programación Orientada y Colecciones de Datos en Java**  
+> **Proyecto Final del Módulo 4: Programación Orientada a Objetos y Colecciones de Datos en Java**  
 > **Desarrollado por:** Alonso Vargas  
 > **Fecha:** Agosto 2025
 
