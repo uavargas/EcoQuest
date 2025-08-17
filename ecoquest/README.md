@@ -473,7 +473,7 @@ List<Voluntario> educadores = voluntarios.values()
 
 ### **📸 Evidencia Visual del Cumplimiento**
 
-Las capturas de pantalla proporcionadas demuestran visualmente el cumplimiento completo de todos los requisitos del módulo:
+Las capturas de pantalla proporcionadas demuestran visualmente el cumplimiento completo de todos los requisitos del Proyecto:
 
 - **🎮 Interfaz Principal**: Demuestra el menú interactivo en consola requerido
 - **👥 Gestión de Voluntarios**: Muestra registro exitoso con ID único y habilidades
