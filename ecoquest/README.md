@@ -365,7 +365,7 @@ public class MisionService {
 
 ### **📸 Capturas de Pantalla del Sistema en Funcionamiento**
 
-El sistema EcoQuest ha sido probado exhaustivamente y documentado con capturas de pantalla que muestran cada funcionalidad en acción. Estas imágenes demuestran la robustez y usabilidad del sistema.
+El sistema EcoQuest ha sido probado y documentado con capturas de pantalla que muestran cada funcionalidad en acción. Estas imágenes demuestran la usabilidad del sistema.
 
 #### **🎮 Interfaz Principal del Sistema**
 ![Menú Principal](src/main/resources/screenshots/ejecucionMenú.png)
