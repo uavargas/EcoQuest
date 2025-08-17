@@ -404,7 +404,7 @@ El sistema EcoQuest ha sido probado y documentado con capturas de pantalla que m
 #### **✅ Completar Misiones con Sistema de Recompensas**
 ![Misión Finalizada con Recompensa](src/main/resources/screenshots/MisionFinalizadaconRecompensa.png)
 
-**Descripción**: Finalización de una misión de plantación que muestra el sistema de recompensas en acción. El voluntario recibe puntos basados en el impacto ambiental (árboles plantados).
+**Descripción**: Finalización de una misión de plantación que muestra el sistema de recompensas en acción. El voluntario recibe puntos basados en el impacto ambiental (Limpieza).
 
 ---
 
