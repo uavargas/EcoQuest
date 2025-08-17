@@ -18,6 +18,7 @@ public class Voluntario {
     private final String id;
     private final String nombre;
     private final List<String> habilidades;
+    private int puntos;
 
     /**
      * Conjunto de misiones completadas.
@@ -42,6 +43,7 @@ public class Voluntario {
         this.nombre = nombre;
         this.habilidades = new ArrayList<>();
         this.misionesCompletadas = new HashSet<>();
+        this.puntos = 0;
     }
 
     /**
@@ -73,6 +75,13 @@ public class Voluntario {
     }
 
     /**
+     * Añade puntos al voluntario.
+     */
+    public void agregarPuntos(int puntos) {
+        this.puntos += puntos;
+    }
+
+    /**
      * Devuelve la cantidad de misiones finalizadas.
      * Se usa size() sobre el Set para evitar contar duplicados.
      */
@@ -100,6 +109,10 @@ public class Voluntario {
         return misionesCompletadas;
     }
 
+    public int getPuntos() {
+        return puntos;
+    }
+
     /* ----------------------------------------------------------
        Representación textual 
        ---------------------------------------------------------- */
@@ -107,8 +120,8 @@ public class Voluntario {
     @Override
     public String toString() {
         return String.format(
-            "Voluntario[id=%s, nombre=%s, habilidades=%d, misionesCompletadas=%d]",
-            id, nombre, habilidades.size(), misionesCompletadas.size()
+            "Voluntario[id=%s, nombre=%s, puntos=%d, habilidades=%d, misionesCompletadas=%d]",
+            id, nombre, puntos, habilidades.size(), misionesCompletadas.size()
         );
     }
 }

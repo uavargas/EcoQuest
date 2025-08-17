@@ -6,6 +6,6 @@ package com.ecoquest.model;
  */
 public interface Recompensa {
 
- String otorgarRecompensa();
+ int calcularPuntosRecompensa();
 
 }

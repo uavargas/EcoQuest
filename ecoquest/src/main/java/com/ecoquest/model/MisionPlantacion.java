@@ -33,14 +33,13 @@ public class MisionPlantacion  extends Mision implements Recompensa {
     }
 
     /**
-     * Calcula la recompensa por completar la misión de plantación.
+     * Calcula los puntos de recompensa por completar la misión de plantación.
      *
      * @return Recompensa en puntos por completar la misión.
      */
     @Override
-    public String otorgarRecompensa() {
-        int puntos = this.cantidadArbolesPlantados * 20; // Asumiendo 20 puntos por árbol
-        return "Has obtenido " + puntos + " puntos por tu esfuerzo en la plantación de árboles en la comunidad de EcoQuest.";
+    public int calcularPuntosRecompensa() {
+        return this.cantidadArbolesPlantados * 20; // Asumiendo 20 puntos por árbol
     }
     // Getters
     public int getCantidadArbolesPlantados() {

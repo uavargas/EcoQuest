@@ -33,14 +33,13 @@ public class MisionLimpieza extends Mision implements Recompensa {
     }
 
     /**
-     * Calcula la recompensa por completar la misión de limpieza.
+     * Calcula los puntos de recompensa por completar la misión de limpieza.
      *
      * @return Recompensa en puntos por completar la misión.
      */
     @Override
-    public String otorgarRecompensa() {
-        int puntos = this.cantidadBasuraRecogida * 10; // Asumiendo 10 puntos por kilo
-        return "Has obtenido " + puntos + " puntos por tu esfuerzo en la limpieza ambiental en la comunidad de EcoQuest.";
+    public int calcularPuntosRecompensa() {
+        return this.cantidadBasuraRecogida * 10; // Asumiendo 10 puntos por kilo
     }
 
     // Getters

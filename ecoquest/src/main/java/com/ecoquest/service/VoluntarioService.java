@@ -1,13 +1,11 @@
 package com.ecoquest.service;
 
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.HashMap; 
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-
 import com.ecoquest.model.Mision;
+import com.ecoquest.model.Recompensa;
 import com.ecoquest.model.Voluntario;
 
 /**
@@ -18,13 +16,6 @@ public class VoluntarioService {
 
     /** Voluntarios indexados por ID único. */
     private final Map<String, Voluntario> voluntarios = new HashMap<>();
-
-    /**
-     * Misiones completadas por cada voluntario.
-     * Clave: ID del voluntario.
-     * Valor: conjunto de misiones terminadas.
-     */
-    private final Map<String, Set<Mision>> misionesCompletadas = new HashMap<>();
 
     /** Constructor vacío: inicializa colecciones vacías. */
     public VoluntarioService() {
@@ -45,7 +36,6 @@ public class VoluntarioService {
             throw new IllegalArgumentException("El voluntario con el ID " + id + " ya existe.");
         }
         voluntarios.put(id, voluntario);
-        misionesCompletadas.put(id, new HashSet<>()); // Inicializa vacío el conjunto de misiones completadas
     }
 
     /**
@@ -59,22 +49,25 @@ public class VoluntarioService {
         if (v == null) {
             throw new IllegalArgumentException("Voluntario no encontrado con ID: " + voluntarioId);
         }
-        if (!misionesCompletadas.get(voluntarioId).add(mision)) {
-            throw new IllegalStateException("No se pudo agregar la misión a las completadas.");
-        }
+        
+        // El voluntario registra la misión internamente
         v.completarMision(mision);
+
+        // Si la misión tiene recompensa, se le asignan los puntos
+        if (mision instanceof Recompensa) {
+            int puntos = ((Recompensa) mision).calcularPuntosRecompensa();
+            v.agregarPuntos(puntos);
+            System.out.println("✨ ¡" + v.getNombre() + " ha ganado " + puntos + " puntos de recompensa! ✨");
+        }
     }
 
     /**
-     * Devuelve los tres voluntarios con más misiones completadas (orden
-     * descendente).
+     * Devuelve los tres voluntarios con más puntos (orden descendente).
      *
      * @return lista inmutable con los TOP 3 voluntarios.
      */
     public List<Voluntario> topVoluntarios() {
-        return voluntarios.values().stream()
-                .sorted(Comparator.comparingInt((Voluntario v) -> v.getMisionesCompletadas().size())
-                        .reversed())
+        return voluntarios.values().stream().sorted(Comparator.comparingInt(Voluntario::getPuntos).reversed())
                 .limit(3)
                 .toList();
     }
@@ -92,5 +85,15 @@ public class VoluntarioService {
                         .stream()
                         .anyMatch(h -> h.equalsIgnoreCase(hab)))
                 .toList();
+    }
+
+    /**
+     * Obtiene un voluntario por su ID.
+     *
+     * @param id identificador único del voluntario.
+     * @return el voluntario correspondiente o null si no existe.
+     */
+    public Voluntario getVoluntario(String id) {
+        return voluntarios.get(id);
     }
 }

@@ -1,6 +1,8 @@
 package com.ecoquest.model;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Clase abstracta que representa una misión ecológica dentro del sistema
@@ -27,6 +29,7 @@ public abstract class Mision {
     private final PuntoEco ubicacion;
     private final LocalDate fecha;
     private final NivelDificultad nivelDificultad;
+    private final Set<Voluntario> voluntariosAsignados;
 
     public Mision(String id, String descripcion, PuntoEco ubicacion, LocalDate fecha, NivelDificultad nivelDificultad) {
         this.id = id;
@@ -34,6 +37,7 @@ public abstract class Mision {
         this.ubicacion = ubicacion;
         this.fecha = fecha;
         this.nivelDificultad = nivelDificultad;
+        this.voluntariosAsignados = new HashSet<>();
     }
 
     /**
@@ -65,11 +69,20 @@ public abstract class Mision {
         return nivelDificultad;
     }
 
+    public Set<Voluntario> getVoluntariosAsignados() {
+        return voluntariosAsignados;
+    }
+
+    public void asignarVoluntario(Voluntario voluntario) {
+        this.voluntariosAsignados.add(voluntario);
+    }
+
     @Override
     public String toString() {
+        String ubicacionStr = (ubicacion != null) ? ubicacion.getNombre() : "No asignada";
         return String.format(
-                "Mision[id=%s, descripcion=%s, ubicacion=%s, fecha=%s, nivelDificultad=%s]",
-                id, descripcion, ubicacion, fecha, nivelDificultad);
+                "Mision[id=%s, desc='%s', ubicacion=%s, fecha=%s, dificultad=%s, asignados=%d]",
+                id, descripcion, ubicacionStr, fecha, nivelDificultad, voluntariosAsignados.size());
     }
 
 }
