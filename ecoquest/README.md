@@ -370,7 +370,7 @@ El sistema EcoQuest ha sido probado y documentado con capturas de pantalla que m
 #### **🎮 Interfaz Principal del Sistema**
 ![Menú Principal](src/main/resources/screenshots/ejecucionMenú.png)
 
-**Descripción**: Menú principal colorido y atractivo que muestra las 8 opciones disponibles del sistema, con diseño profesional y fácil navegación.
+**Descripción**: Menú principal claro y atractivo que muestra las 8 opciones disponibles del sistema y fácil navegación.
 
 ---
 
