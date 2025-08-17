@@ -546,7 +546,7 @@ Las contribuciones son bienvenidas. Por favor:
 
 ## 🏆 **RECONOCIMIENTOS**
 
-- **Módulo 8**: Programación Orientada a Objetos y Manejo de Colecciones
+- **Cohorte 3 Módulo 4**: Programación Orientada a Objetos y Manejo de Colecciones
 - **Instructor**: Alfonso Lara
 - **Institución**: DevSenior
 - **Fecha de Entrega**: Agosto 2025
