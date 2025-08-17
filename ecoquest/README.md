@@ -98,9 +98,10 @@ ecoquest/
 │   │   │           ├── 🎮 MainMenu.java             # Interfaz de usuario
 │   │   │           ├── 👥 VoluntarioService.java    # Gestión de voluntarios
 │   │   │           └── 🎯 MisionService.java       # Gestión de misiones
-│   │   └── 📁 resources/                           # Recursos del proyecto
+│   │   └── 📁 resources/
+│   │         ├──📁 screenshots                     # Recursos del proyecto imagenes
 │   │       ├── 📊 diagrama-ecoquest.png            # Diagrama UML
-│   │       └── 📖 README.md                        # Este archivo
+│   │                             
 │   └── 📁 test/                                    # Tests unitarios (preparado)
 ├── 📁 target/                                      # Archivos compilados
 ├── 📄 pom.xml                                      # Configuración Maven
