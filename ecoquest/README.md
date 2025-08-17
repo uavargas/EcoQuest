@@ -1,12 +1,12 @@
 # 🌱 ECOQUEST - Sistema de Gestión de Aventuras Ecológicas
 
-[![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://openjdk.java.net/projects/jdk/17/)
+[![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://openjdk.java.net/projects/jdk/17/)
 [![Maven](https://img.shields.io/badge/Maven-3.8+-blue.svg)](https://maven.apache.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> **Proyecto Final del Módulo 8: Programación Orientada a Objetos Avanzada**  
+
+> **Proyecto Final del Módulo 4: Programación Orientada y Colecciones de Datos en Java**  
 > **Desarrollado por:** Alonso Vargas  
-> **Fecha:** Diciembre 2024
+> **Fecha:** Agosto 2025
 
 ---
 
@@ -41,9 +41,9 @@ Las organizaciones ambientales necesitan un sistema que:
 - ✅ Generen reportes de participación y efectividad
 
 ### **Solución Implementada**
-Un sistema robusto en Java que demuestra dominio completo de:
+Un sistema implementado en Java que comprende de:
 - **Programación Orientada a Objetos** con herencia, interfaces y polimorfismo
-- **Gestión eficiente de colecciones** con justificación técnica sólida
+- **Gestión  de colecciones** con justificación técnica sólida
 - **Arquitectura de software** con separación clara de responsabilidades
 - **Manejo de excepciones** y validaciones robustas
 - **Programación funcional** con Streams y Lambdas
@@ -54,8 +54,6 @@ Un sistema robusto en Java que demuestra dominio completo de:
 
 ### **Patrones de Diseño Implementados**
 - **Arquitectura en Capas**: Separación clara entre modelo, servicio y presentación
-- **Patrón Service**: Lógica de negocio centralizada en servicios especializados
-- **Patrón Factory**: Creación de misiones según el tipo seleccionado
 
 ### **Principios de Diseño**
 - **Separación de Responsabilidades**: Cada clase tiene una función específica
@@ -68,15 +66,14 @@ Un sistema robusto en Java que demuestra dominio completo de:
 ## 🔧 **TECNOLOGÍAS IMPLEMENTADAS**
 
 ### **Lenguaje y Plataforma**
-- **Java 17**: Última versión LTS con características modernas
+- **Java 21**: Última versión LTS con características modernas
 - **Maven**: Gestión de dependencias y build del proyecto
-- **JUnit**: Framework de testing (preparado para implementación)
 
 ### **Características de Java Utilizadas**
 - **Programación Orientada a Objetos**: Herencia, interfaces, polimorfismo
 - **Colecciones Framework**: HashMap, HashSet, List, Streams
 - **Programación Funcional**: Lambdas y Streams API
-- **Manejo de Excepciones**: Validaciones robustas y control de errores
+- **Manejo de Excepciones**: Validaciones  y control de errores
 
 ---
 
@@ -114,31 +111,6 @@ ecoquest/
 
 ---
 
-## 📍 **COORDENADAS GPS Y PUNTOS ECOLÓGICOS**
-
-### **Base de Datos de Puntos Ecológicos Colombianos**
-El sistema incluye una base de datos completa con **20+ puntos ecológicos reales de Colombia**, cada uno con:
-- ✅ **Coordenadas GPS precisas** (latitud y longitud)
-- ✅ **Tipos de ecosistema** variados (Bosque, Playa, Río, Desierto, etc.)
-- ✅ **IDs únicos** para fácil identificación
-- ✅ **Descripciones detalladas** de cada ubicación
-
-### **Ejemplos de Puntos Ecológicos Disponibles**
-- **🌲 Parque Nacional El Cocuy**: 6.4667°N, -72.2333°W (BOSQUE)
-- **🌊 Playa Blanca - Isla Barú**: 10.1833°N, -75.5500°W (PLAYA)
-- **🌿 Río Magdalena**: 5.0667°N, -74.7333°W (RÍO)
-- **🏜️ Desierto de La Tatacoa**: 3.2333°N, -75.1667°W (DESIERTO)
-
-### **Validación de Coordenadas**
-El sistema valida automáticamente que las coordenadas estén en rangos válidos:
-- **Latitud**: -90° a +90° (de Polo Sur a Polo Norte)
-- **Longitud**: -180° a +180° (de Greenwich hacia Este y Oeste)
-
-### **Archivo de Coordenadas**
-Consulta el archivo `COORDENADAS_COLOMBIA.md` para la lista completa de puntos ecológicos disponibles.
-
----
-
 ## 🚀 **INSTALACIÓN Y EJECUCIÓN**
 
 ### **Requisitos Previos**
@@ -150,7 +122,7 @@ Consulta el archivo `COORDENADAS_COLOMBIA.md` para la lista completa de puntos e
 
 #### **1. Clonar el Repositorio**
 ```bash
-git clone https://github.com/tu-usuario/ecoquest.git
+git clone https://github.com/uvargas/ecoquest.git
 cd ecoquest
 ```
 
@@ -203,7 +175,6 @@ mvn test
 - ✅ **Ubicaciones**: Coordenadas GPS reales de Colombia con validación de rangos
 - ✅ **Tipos de Ecosistema**: Bosque, Desierto, Montaña, Laguna, Playa, Río, etc.
 - ✅ **Validación**: Coordenadas dentro de rangos válidos (-90 a 90 latitud, -180 a 180 longitud)
-- ✅ **Base de Datos**: Incluye 20+ puntos ecológicos colombianos con coordenadas precisas
 
 ### **4. Sistema de Recompensas**
 - ✅ **Plantación**: 20 puntos por árbol plantado
@@ -379,7 +350,7 @@ public class MisionService {
 - ✅ **Streams**: Operaciones funcionales y filtrado
 
 ### **3. Manejo de Excepciones**
-- ✅ **Validación robusta**: Coordenadas geográficas válidas
+- ✅ **Validación**: Coordenadas geográficas válidas
 - ✅ **Control de duplicados**: IDs únicos para entidades
 - ✅ **Manejo de errores**: Mensajes claros para el usuario
 
@@ -476,8 +447,8 @@ mvn exec:java -Dexec.mainClass="com.ecoquest.Main"
 ```
 === ECOQUEST MENU ===
 1. Registrar Voluntario
-2. Registrar Misión
-3. Registrar Punto Ecológico
+2. Registrar Punto Ecológico
+3. Registrar Misión
 4. Asignar Voluntario a Misión
 5. Completar Misión
 6. Buscar Voluntarios por Habilidad
@@ -486,8 +457,8 @@ mvn exec:java -Dexec.mainClass="com.ecoquest.Main"
 
 Seleccione una opción: 1
 ID: V001
-Nombre: Angélica Torres
-Habilidades (separadas por coma): plantar árboles,educar
+Nombre: Alonso Vargas
+Habilidades (separadas por coma):educar,reciclar
 Voluntario registrado.
 
 === ECOQUEST MENU ===
@@ -554,27 +525,6 @@ Seleccione una opción: 8
 
 ---
 
-## 📈 **FUTURAS MEJORAS**
-
-### **Corto Plazo (1-3 meses)**
-- 📁 **Persistencia de datos**: Almacenamiento en archivos JSON/XML
-- 🧪 **Tests unitarios**: Cobertura completa con JUnit
-- 📝 **Validaciones**: Reglas de negocio más robustas
-- 🔒 **Seguridad**: Autenticación de usuarios
-
-### **Mediano Plazo (3-6 meses)**
-- 🗄️ **Base de datos**: Migración a PostgreSQL/MySQL
-- 🖥️ **Interfaz gráfica**: Aplicación desktop con JavaFX
-- 🏅 **Sistema de insignias**: Logros y reconocimientos
-- 📊 **Reportes avanzados**: Gráficos y estadísticas detalladas
-
-### **Largo Plazo (6+ meses)**
-- 🌐 **Aplicación web**: Frontend React + Backend Spring Boot
-- 📱 **App móvil**: Versión Android/iOS
-- 🗺️ **Integración GPS**: Mapas en tiempo real
-- 🤖 **Inteligencia artificial**: Recomendaciones de misiones
-
----
 
 ## 📊 **JUSTIFICACIÓN DEL USO DE COLECCIONES**
 
@@ -623,7 +573,7 @@ List<Voluntario> educadores = voluntarios.values()
 
 ---
 
-## 🎯 **CUMPLIMIENTO DE REQUISITOS DEL MÓDULO 8**
+## 🎯 **CUMPLIMIENTO DE REQUISITOS DEL MÓDULO 4**
 
 ### **📸 Evidencia Visual del Cumplimiento**
 
@@ -676,18 +626,13 @@ Las capturas de pantalla proporcionadas demuestran visualmente el cumplimiento c
 
 ---
 
-## 📝 **LICENCIA**
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
-
----
 
 ## 👨‍💻 **DESARROLLADOR**
 
 **Alonso Vargas**  
-**Proyecto:** EcoQuest - Módulo 8  
-**Tecnologías:** Java 17, POO, Colecciones, Streams  
-**Estado:** 100% Funcional y Listo para Producción
+**Proyecto:** EcoQuest - Módulo 4 Academia DevSenior  
+**Tecnologías:** Java 21, POO, Colecciones, Streams  
+**Estado:** 100% Funcional
 
 ---
 
@@ -708,23 +653,23 @@ Las contribuciones son bienvenidas. Por favor:
 Si tienes preguntas sobre el proyecto o quieres contribuir:
 
 - 📧 **Email**: [tu-email@ejemplo.com]
-- 🐛 **Issues**: [GitHub Issues](https://github.com/tu-usuario/ecoquest/issues)
-- 💬 **Discusiones**: [GitHub Discussions](https://github.com/tu-usuario/ecoquest/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/uvargas/ecoquest/issues)
+- 💬 **Discusiones**: [GitHub Discussions](https://github.com/uvargas/ecoquest/discussions)
 
 ---
 
 ## 🏆 **RECONOCIMIENTOS**
 
-- **Módulo 8**: Programación Orientada a Objetos Avanzada
-- **Instructor**: [Nombre del Instructor]
-- **Institución**: [Nombre de la Institución]
-- **Fecha de Entrega**: Diciembre 2024
+- **Módulo 8**: Programación Orientada a Objetos y Manejo de Colecciones
+- **Instructor**: Alfonso Lara
+- **Institución**: DevSenior
+- **Fecha de Entrega**: Agosto 2025
 
 ---
 
 **¡Gracias por revisar EcoQuest! 🌱**
 
-*Un proyecto que demuestra dominio completo de POO, colecciones y arquitectura de software profesional, respaldado por evidencia visual completa de su funcionamiento.*
+*Un proyecto para poner en practica y demostrar dominio de POO, colecciones y arquitectura de software profesional, respaldado por evidencia visual completa de su funcionamiento.*
 
 ---
 
