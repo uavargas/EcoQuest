@@ -23,8 +23,6 @@
 - [📚 Documentación Técnica](#-documentación-técnica)
 - [🏆 Logros Técnicos](#-logros-técnicos)
 - [🔍 Demostración del Sistema](#-demostración-del-sistema)
-- [📈 Futuras Mejoras](#-futuras-mejoras)
-- [📝 Licencia](#-licencia)
 
 ---
 
