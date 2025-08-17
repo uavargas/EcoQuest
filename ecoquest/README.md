@@ -16,7 +16,6 @@
 - [🏗️ Arquitectura del Sistema](#️-arquitectura-del-sistema)
 - [🔧 Tecnologías Implementadas](#-tecnologías-implementadas)
 - [📦 Estructura del Proyecto](#-estructura-del-proyecto)
-- [📍 Coordenadas GPS y Puntos Ecológicos](#-coordenadas-gps-y-puntos-ecológicos)
 - [🚀 Instalación y Ejecución](#-instalación-y-ejecución)
 - [🎮 Funcionalidades del Sistema](#-funcionalidades-del-sistema)
 - [📊 Diagrama UML](#-diagrama-uml)
