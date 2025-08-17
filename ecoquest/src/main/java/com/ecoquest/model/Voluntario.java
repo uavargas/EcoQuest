@@ -81,17 +81,11 @@ public class Voluntario {
         this.puntos += puntos;
     }
 
-    /**
-     * Devuelve la cantidad de misiones finalizadas.
-     * Se usa size() sobre el Set para evitar contar duplicados.
-     */
+    
     public int obtenerTotalMisiones() {
         return misionesCompletadas.size();
     }
 
-    /* ----------------------------------------------------------
-       Getters (sin setters → diseño inmutable)
-       ---------------------------------------------------------- */
 
     public String getId() {
         return id;
@@ -112,10 +106,6 @@ public class Voluntario {
     public int getPuntos() {
         return puntos;
     }
-
-    /* ----------------------------------------------------------
-       Representación textual 
-       ---------------------------------------------------------- */
 
     @Override
     public String toString() {
